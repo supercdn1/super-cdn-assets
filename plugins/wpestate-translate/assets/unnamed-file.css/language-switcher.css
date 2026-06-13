@@ -1,0 +1,346 @@
+.wpr-language-switcher {
+ background-color: #fff;
+}
+
+.wpr-language-switcher .wpr-language-switcher-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    padding-right: 30px;
+}
+
+.wpr-language-switcher-current,
+.wpr-language-switcher-item-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpr-language-switcher-label {
+    color: #222222;
+    text-transform: none;
+    /* padding: 0px 10px; */
+    padding-right: 10px;
+}
+
+.wpr-language-switcher .wpr-language-switcher-toggle,
+.wpr-language-switcher .wpr-language-switcher-toggle:focus,
+.wpr-language-switcher .wpr-language-switcher-toggle:active,
+.wpr-language-switcher .wpr-language-switcher-toggle.show {
+    color: #222222;
+}
+
+.wpr-language-switcher-flag {
+    width: 18px;
+    height: 14px;
+    border-radius: 2px;
+    overflow: hidden;
+    line-height: 0;
+    flex: 0 0 auto;
+}
+
+.wpr-language-switcher-flag img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+}
+
+.wpr-language-switcher-flag.wpr-language-switcher-flag--hidden {
+    display: none;
+}
+
+#wpr-language-switcher-wpr_translate_language_switcher-toggle.btn:hover {
+    color: #222222;
+}
+
+.wpr-language-switcher .wpr-language-switcher-toggle::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 1;
+    border: none;
+}
+
+/* WPRentals-only caret alignment override. */
+body.wp-theme-wprentals .wpr-language-switcher .wpr-language-switcher-toggle::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    position: absolute;
+    right: 0px;
+}
+
+.wpr-debug-panel {
+    position: relative;
+    height: 400px;
+    padding: 10px;
+    z-index: 9999;
+    font-size: 12px;
+}
+
+/* Menu-injected language switcher only. */
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item {
+    position: relative;
+}
+
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item .wpr-language-switcher-menu {
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+}
+
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item:hover .wpr-language-switcher-menu,
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item .wpr-language-switcher-menu.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item .dropdown-item.active,
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item .dropdown-item:active,
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item .dropdown-item:hover,
+.wpresidence-navigation-menu .wpr-language-switcher-menu-item .dropdown-item:focus {
+    color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color));
+    background-color: transparent;
+}
+
+.top_bar_wrapper .wpr-language-switcher-menu > li:hover {
+    color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color));
+    background-color: var(--wp-estate-menu-hover-back-color-option, var(--wp-estate-menu-hover-back-color));
+}
+
+.top_bar_wrapper .wpr-language-switcher-menu .dropdown-item:hover,
+.top_bar_wrapper .wpr-language-switcher-menu .dropdown-item:focus {
+    color: var(--wp-estate-menu-hover-font-color-option, var(--wp-estate-menu-hover-font-color));
+    background-color: var(--wp-estate-menu-hover-back-color-option, var(--wp-estate-menu-hover-back-color));
+}
+
+/* Decouple dropdown spacing from sticky-menu collapsed state. */
+.wpr-language-switcher .wpr-language-switcher-menu {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.wpr-language-switcher .wpr-language-switcher-menu .wpr-language-switcher-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    line-height: 1.4;
+    min-height: 0;
+}
+
+.wpr-language-switcher .wpr-language-switcher-item-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+/* WPRentals header menu compatibility (Bootstrap 3 / #access menu markup). */
+#access .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher {
+    background: transparent;
+}
+
+#access .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: inherit;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    min-height: 0;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+#access .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle:hover,
+#access .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle:focus {
+    background: transparent;
+    color: #b881fc;
+}
+
+#access .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher .wpr-language-switcher-menu {
+    top: 77px;
+}
+
+#access .wpr-language-switcher-menu-item--wprentals:hover > .wpr-language-switcher .wpr-language-switcher-menu,
+#access .wpr-language-switcher-menu-item--wprentals.is-open > .wpr-language-switcher .wpr-language-switcher-menu {
+    opacity: 1;
+    top: 69px;
+    visibility: visible;
+}
+
+#access .wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-menu .wpr-language-switcher-item {
+    background: transparent;
+    border: 0;
+    color: #484848;
+    display: block;
+    font-size: 13px;
+    padding: 10px 25px;
+    text-align: left;
+    width: 100%;
+    transition: all 0.25s ease;
+}
+
+#access .wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-menu .wpr-language-switcher-item:hover,
+#access .wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-menu .wpr-language-switcher-item:focus {
+    background: transparent;
+    color: #b881fc;
+    padding-left: 30px;
+}
+
+/* WPRentals language switcher in non-header menu locations (footer subfooter_menu, mobile menus, etc.).
+   The #access block above scopes every show-state rule to the main header, so when the JS adds
+   the .is-open class on a switcher rendered into a non-header menu, no CSS rule reacts and the
+   dropdown stays visibility:hidden. The rules below mirror the header open behavior without the
+   #access ancestor requirement, plus strip the Bootstrap .btn chrome from the toggle so it
+   blends with the surrounding menu links. */
+.wpr-language-switcher-menu-item--wprentals {
+    position: relative;
+}
+
+.wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher .wpr-language-switcher-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    min-width: 160px;
+    margin: 0;
+    padding: 4px 0;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    list-style: none;
+}
+
+.wpr-language-switcher-menu-item--wprentals:hover > .wpr-language-switcher .wpr-language-switcher-menu,
+.wpr-language-switcher-menu-item--wprentals.is-open > .wpr-language-switcher .wpr-language-switcher-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-menu .wpr-language-switcher-item {
+    background: transparent;
+    border: 0;
+    color: #484848;
+    display: block;
+    font-size: 13px;
+    padding: 8px 16px;
+    text-align: left;
+    width: 100%;
+    transition: color 0.2s ease;
+}
+
+.wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-menu .wpr-language-switcher-item:hover,
+.wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-menu .wpr-language-switcher-item:focus {
+    background: transparent;
+    color: #b881fc;
+}
+
+/* Footer-specific overrides for the WPRentals subfooter row.
+   The theme sets `#colophon .btn { width: 217px }` and `.btn { padding: 9px 35px;
+   text-transform: uppercase; box-shadow: 0 2px 0 rgba(218,68,83,1) }`, all of which
+   land on the switcher's <button class="btn dropdown-toggle ..."> and render it as
+   a wide uppercase block with a red underline, breaking the inline subfooter row.
+   These selectors use `#colophon` so they outrank the theme's button rules. */
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher {
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+}
+
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle {
+    width: auto;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    line-height: 1.6em;
+    text-transform: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle:hover,
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher > .wpr-language-switcher-toggle:focus {
+    background: transparent;
+    box-shadow: none;
+    color: #b881fc;
+    outline: none;
+}
+
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-current {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals .wpr-language-switcher-label {
+    display: inline;
+    line-height: 1.6em;
+}
+
+/* The subfooter sits at the bottom of the viewport, so the dropdown opens upward. */
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals > .wpr-language-switcher .wpr-language-switcher-menu {
+    top: auto;
+    bottom: 100%;
+  
+    right: 0;
+    margin: 0 0 0px 0;
+    min-width: 140px;
+}
+
+
+#colophon .subfooter_menu .wpr-language-switcher-menu-item--wprentals li{
+    margin-left: 0px;
+}
+
+body.wp-theme-wprentals #colophon .subfooter_menu .wpr-language-switcher .wpr-language-switcher-toggle::after {
+    right: -15px;
+}
+
+
