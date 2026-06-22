@@ -1,0 +1,37 @@
+/*
+	ERE Elementor Frontend Styles
+ */
+
+.backend-property-id {
+    font-size: 10px;
+    color: #000000;
+}
+
+.rh-ultra-header-wrapper .rhea-custom-block p,
+.rh-responsive-header .rhea-custom-block p {
+    margin: 0;
+}
+
+.rh-ultra-header-wrapper .rhea-custom-block h1,
+.rh-ultra-header-wrapper .rhea-custom-block h2,
+.rh-ultra-header-wrapper .rhea-custom-block h3,
+.rh-ultra-header-wrapper .rhea-custom-block h4,
+.rh-ultra-header-wrapper .rhea-custom-block h5,
+.rh-ultra-header-wrapper .rhea-custom-block h6,
+.rh-responsive-header .rhea-custom-block h1,
+.rh-responsive-header .rhea-custom-block h2,
+.rh-responsive-header .rhea-custom-block h3,
+.rh-responsive-header .rhea-custom-block h4,
+.rh-responsive-header .rhea-custom-block h5,
+.rh-responsive-header .rhea-custom-block h6 {
+    margin: 0;
+}
+
+.rh-ultra-header-wrapper .rhea-custom-block ul,
+.rh-ultra-header-wrapper .rhea-custom-block ol,
+.rh-responsive-header .rhea-custom-block ul,
+.rh-responsive-header .rhea-custom-block ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
