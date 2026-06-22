@@ -1,0 +1,111 @@
+.daterangepicker {
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(var(--rh-global-color-primary-rgb), 0.3);
+}
+
+.daterangepicker .calendar-table thead tr {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.daterangepicker .calendar-table,
+.daterangepicker .calendar-table table {
+    border: none;
+}
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+    display: inline-block;
+    line-height: 16px;
+    text-transform: capitalize;
+}
+
+div.daterangepicker td.active, div.daterangepicker td.active:hover {
+    text-align: center;
+    border-radius: var(--rh-round-corner-general-xsmall);
+    border-color: var(--rh-global-color-primary-light);
+    background: var(--rh-global-color-primary);
+    color: #ffffff;
+}
+
+div.daterangepicker td {
+    padding: 0.8rem;
+}
+
+.daterangepicker td.start-date.end-date {
+    border-radius: var(--rh-round-corner-general-xsmall);
+}
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+    border-radius: var(--rh-round-corner-general-xsmall);
+    margin-bottom: 1px;
+}
+
+div.daterangepicker td.in-range:not(.end-date) {
+    background-color: var(--rh-global-color-primary-light);
+}
+
+.pac-container {
+    margin-left: -15px;
+    border: 1px solid #efefef;
+}
+
+.pac-container .pac-item {
+    border-bottom: 1px solid #efefef;
+}
+
+.pac-container .pac-item:first-child {
+    border: none;
+}
+
+/* RVR Elementor search fomr widget daterangepicker styles */
+.rhea_ultra_search_form_wrapper .daterangepicker {
+    margin-left: -30px;
+    width: 565px;
+}
+
+.rhea_ultra_search_form_wrapper .daterangepicker:before {
+    border-bottom: 7px solid #ddd;
+    left: 65px;
+}
+
+.rhea_ultra_search_form_wrapper .daterangepicker:after {
+    left: 66px;
+}
+
+.rhea_ultra_search_form_wrapper .daterangepicker .drp-calendar .calendar-table .table-condensed thead {
+    text-transform: capitalize;
+}
+
+.rhea_ultra_search_form_wrapper .daterangepicker .drp-calendar .calendar-table .table-condensed .month {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.rhea_ultra_search_form_wrapper .daterangepicker .drp-calendar .calendar-table .table-condensed thead tr th {
+    font-family: "DM Sans", Sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.rhea_ultra_search_form_wrapper .daterangepicker .drp-calendar .calendar-table .table-condensed tbody tr {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media ( max-width: 1040px ) {
+    .rhea_ultra_search_form_wrapper .daterangepicker {
+        width: 305px;
+        margin-left: 0;
+    }
+
+    .rhea_ultra_search_form_wrapper .daterangepicker:before {
+        left: 35px;
+    }
+
+    .rhea_ultra_search_form_wrapper .daterangepicker:after {
+        left: 36px;
+    }
+}
