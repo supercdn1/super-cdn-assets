@@ -1,0 +1,65 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive portrait tablet */
+/* responsive portrait phone */
+/*  ----------------------------------------------------------------------------
+    module settings
+*/
+/*  ----------------------------------------------------------------------------
+    header_menu settings
+*/
+.td-subscription-active.tds-page .td-main-content-wrap .tdc-content-wrap {
+  width: 1021px;
+  min-height: 100%;
+}
+.td-subscription-active .tds-page-block,
+.td-subscription-active .tds_leads,
+.td-subscription-active .tds_plans_description,
+.td-subscription-active .tds_plans_switcher,
+.td-subscription-active .tds_plans_button,
+.td-subscription-active .tds_plans_price {
+  padding: 20px;
+}
+.td-subscription-active .td-header-sp-top-menu .tds_menu_login {
+  display: inline-block;
+  position: relative;
+  margin: 0 32px 0 0;
+  /* responsive portrait tablet */
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .td-subscription-active .td-header-sp-top-menu .tds_menu_login {
+    margin: 0 22px 0 0;
+  }
+}
+.td-subscription-active .td-header-sp-top-menu .tdw-wml-user,
+.td-subscription-active .td-header-sp-top-menu .tdw-wml-menu {
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .td-subscription-active .td-header-sp-top-menu .tdw-wml-user,
+  .td-subscription-active .td-header-sp-top-menu .tdw-wml-menu {
+    font-size: 10px;
+  }
+}
+.td-subscription-active .td-top-menu-full .tds_menu_login .tdw-wml-user {
+  color: #fff;
+}
+.td-subscription-active .tds_header_login {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.td-subscription-active .tds_header_login .tds_menu_login {
+  vertical-align: unset;
+}
+.td-subscription-active .tds_header_logout {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
